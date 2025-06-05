@@ -10,4 +10,8 @@
   .btn-outline {
     @apply border border-primary text-primary px-6 py-3 rounded-button font-medium hover:bg-primary hover:bg-opacity-5 transition whitespace-nowrap;
   }
+
+  .seccion-destacada {
+    @apply bg-primary bg-opacity-5 p-6 rounded-lg mb-8;
+  }
 }
