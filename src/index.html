@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jornadas de Economía Circular</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white font-mont">
+    <include src="./views/header.html"></include>
+    <main>
+      <section
+        class="min-h-[600px] flex items-center bg-[url('../images/hero-bg.jpg')] bg-cover bg-center"
+      >
+        <div class="container mx-auto px-4 py-16">
+          <div class="max-w-2xl">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Jornadas de Economía Circular 2025
+            </h1>
+            <p class="text-xl text-gray-800 mb-8">
+              Transformando el futuro: soluciones sostenibles para un mundo
+              mejor
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <button class="btn-primary">Inscríbete ahora</button>
+              <button class="btn-outline">Programa Completo</button>
+            </div>
+            <div class="mt-8 flex items-center text-gray-700">
+              <div class="w-6 h-6 flex items-center justify-center mr-2">
+                <i class="ri-calendar-line"></i>
+              </div>
+              <span>10-12 de Mayo, 2025</span>
+              <div class="w-6 h-6 flex items-center justify-center ml-6 mr-2">
+                <i class="ri-map-pin-line"></i>
+              </div>
+              <span>Centro de Convenciones, Leganés</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Descubre Nuestras Jornadas
+            </h2>
+            <p class="text-gray-700 max-w-3xl mx-auto">
+              Tres días de innovación, conocimiento y networking en torno a la
+              economía circular y el desarrollo sostenible.
+            </p>
+          </div>
+
+          <include src="./views/jornadas.html"></include>
+
+          <include src="./views/cta.html"></include>
+        </div>
+      </section>
+    </main>
+
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script>
+  </body>
+</html>
