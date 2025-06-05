@@ -1,29 +1,68 @@
-<header class="bg-white shadow-sm">
-  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <div class="flex items-center">
-      <h1 class="text-2xl font-pacifico text-primary">EconCircular</h1>
-    </div>
-    <nav class="hidden md:flex space-x-8">
+<header class="bg-white shadow-sm py-4">
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    <h1 class="text-2xl font-pacifico text-primary m-0">EconCircular</h1>
+
+    <!-- Menú desktop -->
+    <nav class="hidden md:flex space-x-8" id="main-nav">
       <a
         href="index.html"
-        class="text-gray-800 font-medium hover:text-primary transition"
+        class="nav__link text-gray-800 font-medium hover:text-primary transition"
         >Inicio</a
       >
 
       <a
         href="informacion.html"
-        class="text-gray-800 font-medium hover:text-primary transition"
+        class="nav__link text-gray-800 font-medium hover:text-primary transition"
         >Información</a
       >
-
       <a
-        href="programaIA.html"
-        class="text-gray-800 font-medium hover:text-primary transition"
+        href="programaia.html"
+        class="nav__link text-gray-800 font-medium hover:text-primary transition"
         >Programa IA</a
       >
     </nav>
-    <div class="md:hidden w-8 h-8 flex items-center justify-center">
-      <i class="ri-menu-line text-xl"></i>
-    </div>
+
+    <!-- Botón menú móvil -->
+    <button id="menuToggle" class="md:hidden text-2xl text-gray-800">
+      <i class="ri-menu-line"></i>
+    </button>
   </div>
+
+  <!-- Menú móvil -->
+  <div
+    id="mobileMenu"
+    class="fixed top-0 right-0 w-64 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50"
+  >
+    <div class="flex justify-between items-center px-4 py-4 border-b">
+      <h5 class="text-lg font-semibold text-primary">Menú</h5>
+      <button id="menuClose" class="text-xl">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+    <ul class="p-4 space-y-4">
+      <li>
+        <a
+          href="index.html"
+          class="nav__link nav-mobile-link block text-lg text-gray-800 hover:text-primary"
+          >Inicio</a
+        >
+      </li>
+      <li>
+        <a
+          href="informacion.html"
+          class="nav__link nav-mobile-link block text-lg text-gray-800 hover:text-primary"
+          >Información</a
+        >
+      </li>
+      <li>
+        <a
+          href="programaia.html"
+          class="nav__link nav-mobile-link block text-lg text-gray-800 hover:text-primary"
+          >Programa IA</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <div id="overlay" class="fixed inset-0 bg-black/50 z-40 hidden"></div>
 </header>

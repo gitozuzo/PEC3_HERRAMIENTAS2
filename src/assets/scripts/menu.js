@@ -1,21 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.getElementById("menuToggle");
-  const close = document.getElementById("closeMenu");
+  // Activar enlace actual
+  const links = document.querySelectorAll(".nav__link, .nav-mobile-link");
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+  links.forEach((link) => {
+    const href = link.getAttribute("href");
+    if (href === currentPage) {
+      link.classList.add("text-primary", "font-semibold");
+    }
+  });
+
+  // Toggle del menú móvil
   const menu = document.getElementById("mobileMenu");
   const overlay = document.getElementById("overlay");
+  const openBtn = document.getElementById("menuToggle");
+  const closeBtn = document.getElementById("menuClose");
+
+  const openMenu = () => {
+    menu.classList.remove("translate-x-full");
+    overlay.classList.remove("hidden");
+  };
 
   const closeMenu = () => {
     menu.classList.add("translate-x-full");
     overlay.classList.add("hidden");
   };
 
-  if (toggle && close && menu && overlay) {
-    toggle.addEventListener("click", () => {
-      menu.classList.remove("translate-x-full");
-      overlay.classList.remove("hidden");
-    });
-
-    close.addEventListener("click", closeMenu);
-    overlay.addEventListener("click", closeMenu);
-  }
+  openBtn.addEventListener("click", openMenu);
+  closeBtn.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
 });
